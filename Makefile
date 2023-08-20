@@ -27,5 +27,7 @@ clean: down
 prune: clean
 	@docker system prune -fa
 
+reset: data clean prune
+	@echo "Reset done...!"
 
 .PHONY: up down clean fclean
